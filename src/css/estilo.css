@@ -1,112 +1,111 @@
 @import url('https://fonts.googleapis.com/css2/family=Nanum+Gothic:wght@400;700;800&display=swap');
 
-/*Colocando * estilizamos todos elementos */
+
 *{
-    margin: 0;  /*tiramos todas margem */
-    padding: 0; /*São todos os pontos como marcação*/
-    font-weight: 400; /*pesos da fontes*/
+    margin: 0;  
+    padding: 0; 
+    font-weight: 400; 
 }
 
-/*Estilizando o html, o fundo (teg html)*/
+
 html{
     background: linear-gradient(#af67e9, #6565e7); 
-    min-height: 100%; /*Altura mínima da tela*/
+    min-height: 100%; 
 }
 
-/*Corpo */
+
 body {
     font-family: "kumbh sans", sans-serif;
 }
 
-/*estilizatar a teg main*/
+
 main{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-/*Estilizando FAQ*/
+
 .faq{
-    width: 65%; /*largura do elemento */
-    min-height: 450px; /*Altura mínima*/
-    box-shadow: 0px 25px 50px rgba(red, green, blue, alpha); /*Sobra da caixa*/
+    width: 65%; 
+    min-height: 450px;
+    box-shadow: 0px 25px 50px rgba(red, green, blue, alpha);
     background-color: seashell;
-    display: flex; /*Alinhando o texto à frente do layout*/
+    display: flex; 
     align-items: center;
-    border-radius: 30px; /*Efeito, uma leve curva*/
+    border-radius: 30px; 
 }
 
-/*vamos estilizar a imagem, só a classe ilustracao vai ser */
 
 .faq .ilustracao{
-    position: relative; /*Vamos posicionar */
-    left: -120px;  /*esquerda*/
-    width: 50%;     /*direita, está pegando 50% do class*/
+    position: relative;
+    left: -120px;  
+    width: 50%;     
     margin: 50px 0;
 }
-/*Estilizar o conteudo*/
+
 .faq .conteudo{
     width: 40%;    
     padding-bottom: 20px;
 }
 
-/*estilizando o h1*/
+
 .faq .conteudo h1{
-    font-size: 32px; /*tamanho da fonte */
-    font-weight: 700; /*Negrito*/
+    font-size: 32px; 
+    font-weight: 700; 
     margin-bottom: 30px;
 }
 
-/*Estilizando as Perguntas e as Respostas*/
+
 .faq .conteudo .items {
-    list-style-type: none; /*Retirando as bolinhas das perguntas*/
+    list-style-type: none; 
 }
 
-/*Estilizar cada item*/
+
 .faq .conteudo .items .item{
-    cursor: pointer; /*É o mause, ficar como mao en cima da pergunta e resposta*/
-    background-image: url(../Imagens/icone-seta-pra-baixo.png); /*../ para voltar uma pasta, cria uma seta vermelha*/
+    cursor: pointer; 
+    background-image: url(../Imagens/icone-seta-pra-baixo.png); 
     background-repeat: no-repeat;
-    background-position: top 8px right 0;/*Colocando a setina para direita */
-    background-size: 12px; /*Diminuindo*/
-    border-bottom: 1px solid #ccc; /*Criando uma borda */
-    margin: 10px 0; /*Espaço entre uma pergunta e outra*/
+    background-position: top 8px right 0;
+    background-size: 12px;
+    border-bottom: 1px solid #ccc; 
+    margin: 10px 0; 
 }
  /*Tirando a borda o ultimo item (last-child, último item)*/
 .faq .conteudo .items .item:last-child{
     border-bottom: none;
 }
-/*Estilizar as Perguntas h2*/
+
 .item .pergunta{
     padding-bottom: 15px;
     font-size: 18px;
     width: 90%;
-    transition: 0.2s ease;   /*Tempo para mudar a cor */
+    transition: 0.2s ease;  
 }
-/*Quanto passa o mause em cima da pergunta, muda de cor*/
+
 .item .pergunta:hover{
     color:red;  
 }
-/*Estilizar as Respostas*/ 
+ 
 .item .respostas{
-    display: none; /*Queremos esconder esse elemento */
+    display: none; 
     padding-bottom: 20px;
 }
 
-/* ESTILO DO ITEM ATIVO, vai ser colocada pelo javascrip */
+
 .faq .items .item.ativo h2{
-    font-weight: 700; /*Fonte negrito*/
+    font-weight: 700; 
 }
-/*Criando Estilo de abri e fechar a pergunta */
+/
 .faq .items .item.ativo .respostas{
-    display: block; /*Vamos abri a resposta novamente, para editar*/ 
+    display: block;
 }
 .faq .items .item.ativo{
-    background-image: url(../Imagens/icone-seta-pra-cima.png); /*Colocando a cetinha para cima*/
+    background-image: url(../Imagens/icone-seta-pra-cima.png);
 }
 
 
-/*Estilizando responsivo, Ex: Abrindo  pelo cel, o site ficará normal */
+
 @media(max-width: 1140px){
     .faq{ 
         flex-direction: column;
@@ -121,7 +120,7 @@ main{
     }
     .faq .items{
         width: 80%;  
-        margin: 0 auto;   /*Centralizar*/   
+        margin: 0 auto;     
     }
     .faq .items .pergunta{
         font-size: 16px;
